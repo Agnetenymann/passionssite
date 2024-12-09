@@ -1,0 +1,368 @@
+/*************** Reset *********************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/* fonte */
+/* bold */
+@font-face {
+  font-family: "neue_haas_grotesk_display75Bd";
+  src: url(../neue/neuehaasdisplay-bold-webfont.woff2) format("woff2"), url(../neue/neuehaasdisplay-bold-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* medium */
+
+@font-face {
+  font-family: "neue_haas_grotesk_display65Md";
+  src: url(../neue/neuehaasdisplay-mediu-webfont.woff2) format("woff2"), url(../neue/neuehaasdisplay-mediu-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* light  */
+
+@font-face {
+  font-family: "neue_haas_grotesk_display45Lt";
+  src: url(../neue/neuehaasdisplay-light-webfont.woff2) format("woff2"), url(../neue/neuehaasdisplay-light-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* thin */
+
+@font-face {
+  font-family: "neue_haas_grotesk_display35Th";
+  src: url(../neue/neuehaasdisplay-thin-webfont.woff2) format("woff2"), url(../neue/neuehaasdisplay-thin-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* black */
+
+@font-face {
+  font-family: "neue_haas_grotesk_displa95Blk";
+  src: url(../neue/neuehaasdisplay-black-webfont.woff2) format("woff2"), url(../neue/neuehaasdisplay-black-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(255, 246, 225);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(255, 246, 225);
+}
+
+.hero {
+  width: 1500px;
+  margin: 0 auto;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+h1 {
+  /* font-family: "neue_haas_grotesk_display75Bd"; */
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 1rem;
+  font-size: 30px;
+  color: rgb(92, 15, 111);
+}
+
+h2 {
+  font-family: "neue_haas_grotesk_display65Md";
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 1rem;
+  font-size: 23px;
+  color: rgb(103, 23, 123);
+}
+
+.h2_videoer {
+  text-align: center;
+  font-family: "neue_haas_grotesk_display65Md";
+}
+
+p {
+  font-family: "neue_haas_grotesk_display45Lt";
+  font-size: 16px;
+  max-width: 37.5cqw;
+  margin-top: 0.7rem;
+  color: rgb(92, 15, 111);
+  margin-left: 1rem;
+}
+
+.footer_p {
+  font-family: "neue_haas_grotesk_display45Lt";
+  font-size: 20px;
+  color: rgb(255, 246, 225);
+  max-width: 35.5cqw;
+  margin-left: 30rem;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 10px;
+}
+
+footer {
+  background-color: rgb(123, 30, 146);
+  height: 75px;
+}
+
+header {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: rgb(123, 30, 146);
+  font-family: "neue_haas_grotesk_display75Bd";
+  font-size: 20px;
+}
+.top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  color: rgb(123, 30, 146);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: "neue_haas_grotesk_display75Bd";
+}
+
+.logo {
+  /* height: 100%; */
+  width: 80px;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #8f34b3;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.burger {
+  display: block;
+  margin: 1em;
+}
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.2s linear;
+}
+
+nav.active .menu {
+  display: block;
+  background-color: rgb(255, 234, 191);
+  position: absolute;
+  top: 94px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav.active .menu li {
+  margin: 5px 20px;
+}
+
+nav.active .menu a {
+  font-size: 30px;
+  color: rgb(93, 40, 119);
+  font-family: "neue_haas_grotesk_display45Lt";
+}
+
+.button {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  background-color: rgb(251, 224, 171);
+  width: fit-content;
+  padding: 2px 6px 2px 6px;
+  border-radius: 5px;
+  border-top: 1px solid rgb(235, 204, 143);
+  border-right: 1px solid rgb(249, 203, 111);
+  border-bottom: 1px solid rgb(250, 199, 97);
+  border-left: 1px solid rgb(235, 204, 143);
+  box-shadow: 2px 2px rgb(235, 204, 143);
+}
+
+.button a {
+  text-decoration: none;
+  color: rgb(123, 30, 146);
+  font-family: "neue_haas_grotesk_display65Md";
+}
+
+.img_tekst {
+  display: grid;
+}
+
+.img_tekst > * {
+  grid-column: 1;
+  grid-row: 1;
+  align-items: first baseline;
+}
+
+.tekst_img {
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin-left: 8rem;
+  margin-top: 23rem;
+  color: rgb(255, 254, 225);
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    margin: 1em;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: rgb(255, 211, 123);
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 5px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 18px;
+    color: rgb(93, 40, 119);
+  }
+
+  .hero {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-family: "neue_haas_grotesk_display75Bd";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: rgb(92, 15, 111);
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "neue_haas_grotesk_display65Md";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: rgb(86, 27, 101);
+    text-align: center;
+  }
+
+  .h2_videoer {
+    text-align: center;
+    font-family: "neue_haas_grotesk_display65Md";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+  }
+
+  p {
+    font-family: "neue_haas_grotesk_display45Lt";
+    font-size: 15px;
+    max-width: 470px;
+    margin-bottom: 2rem;
+  }
+
+  .tekst_img {
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-left: 5rem;
+    margin-top: 23rem;
+    color: rgb(255, 254, 225);
+  }
+
+  footer {
+    background-color: rgb(123, 30, 146);
+    height: 75px;
+    display: none;
+  }
+}
