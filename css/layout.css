@@ -40,13 +40,6 @@ img {
     grid-row: 2;
   }
 
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 1.5rem;
-    margin-top: 0.5rem;
-  }
-
   .grid_1-1_video {
     display: grid;
     grid-template-columns: 1fr 1fr;
